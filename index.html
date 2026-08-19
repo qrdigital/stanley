@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stanley Boot | Catálogo Oficial</title>
+
+    <meta property="og:title" content="Stanley Boot | Catálogo Oficial">
+    <meta property="og:description" content="Catálogo exclusivo: Tomatodos, Vasos y Accesorios en 20oz, 30oz y 40oz.">
+    <meta property="og:image" content="logostanley.jpg">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --ink: #1e293b;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --soft: #f8fafc;
+            --card: #ffffff;
+            --accent: #2563eb;
+            --accent-dark: #1d4ed8;
+            --wa: #25D366;
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f1f5f9;
+            color: var(--ink);
+            padding-bottom: 100px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* HEADER & BANNER */
+        .hero {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero-banner-wrap {
+            width: 100%;
+            background: #e2e8f0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .business-info {
+            padding: 24px 0;
+        }
+
+        .business-top {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .business-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 3px solid #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,.08);
+            background: #e2e8f0;
+        }
+
+        .business-name {
+            font-size: clamp(22px, 3vw, 30px);
+            font-weight: 800;
+            letter-spacing: -.03em;
+        }
+
+        .business-description {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .business-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+            align-items: center;
+        }
+
+        .meta-item {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-size: 13px;
+            color: #1e40af;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* BOTÓN DE DIRECCIÓN / MAPA */
+        .meta-btn-location {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 999px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all .2s ease;
+            cursor: pointer;
+        }
+
+        .meta-btn-location:hover {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        /* PESTAÑA FLOTANTE LATERAL */
+        .side-tab {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--ink);
+            color: #fff;
+            padding: 14px 10px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: .1em;
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            z-index: 90;
+            box-shadow: -4px 0 15px rgba(0,0,0,.15);
+            transition: transform .2s ease, background .2s ease;
+        }
+
+        .side-tab:hover {
+            background: var(--accent);
+            transform: translateY(-50%) translateX(-3px);
+        }
+
+        /* ESTILOS INTERNOS MODAL DE PRESENTACIÓN */
+        .about-card {
+            text-align: center;
+            padding: 10px 5px;
+        }
+
+        .about-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .about-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .about-bullets {
+            text-align: left;
+            background: var(--soft);
+            padding: 16px;
+            border-radius: 12px;
+            margin: 18px 0;
+            border: 1px solid var(--line);
+        }
+
+        .about-bullets div {
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: var(--ink);
+            line-height: 1.4;
+        }
+
+        .about-bullets div:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-bullets strong {
+            color: var(--accent);
+        }
+
+        /* PRODUCTOS */
+        .section {
+            padding: 28px 0;
+        }
+
+        .section-title {
+            font-size: clamp(22px, 3vw, 28px);
+            font-weight: 800;
+            letter-spacing: -.03em;
+            margin-bottom: 16px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 2px 10px rgba(0,0,0,.02);
+            transition: transform .22s ease, box-shadow .22s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,.06);
+            border-color: var(--accent);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            background: #f8fafc;
+        }
+
+        .product-content {
+            padding: 16px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .product-description {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 14px;
+        }
+
+        .product-price {
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .add-button {
+            background: var(--ink);
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        /* CARRITO FLOTANTE */
+        .cart-floating {
+            position: fixed;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(620px, calc(100% - 32px));
+            background: var(--ink);
+            color: white;
+            border-radius: 16px;
+            padding: 13px 18px;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 14px 38px rgba(0,0,0,.23);
+            cursor: pointer;
+        }
+
+        .cart-total {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        /* MODALES */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            z-index: 200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            width: min(600px, 100%);
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 22px;
+            padding: 24px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .close-button {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 0;
+            background: #f1f5f9;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .modal-product {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .modal-product img {
+            width: 120px;
+            height: 120px;
+            border-radius: 14px;
+            object-fit: cover;
+            background: #f8fafc;
+        }
+
+        .option-group {
+            margin-top: 16px;
+        }
+
+        .option-title {
+            font-weight: 800;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .size-btn, .color-btn {
+            border: 1px solid var(--line);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            background: #fff;
+            transition: .15s;
+        }
+
+        .size-btn.active, .color-btn.active {
+            border-color: var(--accent);
+            background: #eff6ff;
+            color: var(--accent);
+        }
+
+        .color-pill-list {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .color-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid var(--line);
+            padding: 8px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .color-pill.active {
+            border-color: var(--ink);
+            background: var(--ink);
+            color: #fff;
+        }
+
+        .color-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,.1);
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .quantity-selector button {
+            width: 36px;
+            height: 36px;
+            border: 0;
+            background: #f1f5f9;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .modal-add-button {
+            width: 100%;
+            background: var(--ink);
+            color: white;
+            border: 0;
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 20px;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* CARRITO ITEMS */
+        .cart-item {
+            border-bottom: 1px solid var(--line);
+            padding: 12px 0;
+        }
+
+        .cart-item-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-item-details {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .summary {
+            margin-top: 16px;
+            border-top: 1px solid var(--line);
+            padding-top: 12px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        .summary-total {
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .form-group {
+            margin-top: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 9px;
+            font-size: 13px;
+        }
+
+        .whatsapp-order {
+            width: 100%;
+            background: var(--wa);
+            color: white;
+            border: 0;
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 16px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 500px) {
+            .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+            .product-img { height: 160px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PESTAÑA FLOTANTE LATERAL -->
+    <div class="side-tab" onclick="openAboutModal()">
+        NUESTRA PROMESA
+    </div>
+
+    <header class="hero">
+        <div class="hero-banner-wrap">
+            <img class="hero-image" src="bannerstanley.jpg" alt="Banner Stanley Boot">
+        </div>
+        <div class="container business-info">
+            <div class="business-top">
+                <img class="business-logo" src="logostanley.jpg" alt="Logo Stanley Boot">
+                <div>
+                    <h1 class="business-name">Stanley Boot</h1>
+                    <p class="business-description">Catálogo exclusivo de tomatodos y vasos personalizados.</p>
+                </div>
+            </div>
+            <div class="business-meta">
+                <div class="meta-item">🚚 Envíos a todo el Perú</div>
+                <div class="meta-item">⚡ Pedidos directos a WhatsApp</div>
+                <a href="https://maps.google.com/?q=Lima,Peru" target="_blank" class="meta-btn-location">
+                    📍 Dirección / Ver en Mapa
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Catálogo Completo</h2>
+            <div class="products-grid" id="productsGrid"></div>
+        </section>
+    </main>
+
+    <div class="cart-floating" onclick="openCart()">
+        <div>
+            <strong style="display:block; font-size:14px;">Mi Pedido</strong>
+            <span id="cartCount" style="font-size:12px; color:#94a3b8;">0 productos</span>
+        </div>
+        <div class="cart-total" id="floatingTotal">S/ 0.00</div>
+    </div>
+
+    <!-- MODAL SOBRE LA EXPERIENCIA STANLEY BOOT -->
+    <div class="modal-overlay" id="aboutModal">
+        <div class="modal">
+            <div class="modal-header">
+                <img src="logostanley.jpg" alt="Logo Stanley Boot" style="width: 45px; height: 45px; border-radius: 10px; object-fit: cover;">
+                <button class="close-button" onclick="closeModal('aboutModal')">×</button>
+            </div>
+
+            <div class="about-card">
+                <h3>Un Stanley no es solo un termo</h3>
+                <p>
+                    Es tu compañero en las mañanas largas de trabajo, el que te acompaña en cada viaje, el que mantiene tu ritmo y refleja tu estilo. Quien elige Stanley no busca salir del paso; busca durabilidad, diseño y calidad sin concesiones.
+                </p>
+
+                <div class="about-bullets">
+                    <div><strong>• Cuidado en cada detalle:</strong> Accesorios que protegen y destacan tu inversión.</div>
+                    <div><strong>• Atención impecable:</strong> Respuestas claras y soluciones sin vueltas.</div>
+                    <div><strong>• Respeto por tu estilo:</strong> Cuidamos lo que te acompaña todos los días.</div>
+                </div>
+
+                <p style="font-weight: 700; color: var(--ink); margin-bottom: 20px;">
+                    No vendemos accesorios masivos. Cuidamos lo que te acompaña todos los días.
+                </p>
+
+                <button class="modal-add-button" onclick="closeModal('aboutModal')">
+                    Ver Catálogo
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PRODUCTO -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalProductName">Producto</h2>
+                <button class="close-button" onclick="closeModal('productModal')">×</button>
+            </div>
+
+            <div class="modal-product">
+                <img id="modalProductImage" src="" alt="">
+                <div>
+                    <p id="modalProductDescription" style="color:var(--muted); font-size:13px;"></p>
+                    <strong id="modalProductPrice" style="display:block; margin-top:8px; font-size:20px;"></strong>
+                </div>
+            </div>
+
+            <!-- MEDIDA -->
+            <div class="option-group">
+                <div class="option-title">1. Selecciona la Medida</div>
+                <div class="options-grid" id="sizesContainer"></div>
+            </div>
+
+            <!-- COLOR -->
+            <div class="option-group">
+                <div class="option-title">2. Selecciona el Color</div>
+                <div class="color-pill-list" id="colorsContainer"></div>
+            </div>
+
+            <!-- CANTIDAD -->
+            <div class="quantity-selector">
+                <button type="button" onclick="changeModalQuantity(-1)">−</button>
+                <span id="modalQuantity" style="font-weight:800;">1</span>
+                <button type="button" onclick="changeModalQuantity(1)">+</button>
+            </div>
+
+            <button class="modal-add-button" onclick="addToCart()">Agregar al Pedido</button>
+        </div>
+    </div>
+
+    <!-- MODAL CARRITO -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Resumen del Pedido</h2>
+                <button class="close-button" onclick="closeModal('cartModal')">×</button>
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div class="summary">
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="summarySubtotal">S/ 0.00</strong>
+                </div>
+                <div class="summary-line">
+                    <span>Envío</span>
+                    <strong id="summaryDelivery">S/ 0.00</strong>
+                </div>
+                <div class="summary-line summary-total">
+                    <span>Total</span>
+                    <strong id="summaryTotal">S/ 0.00</strong>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top:15px;">
+                <label>Tipo de Entrega</label>
+                <select id="deliveryOption" onchange="updateDelivery()" style="width:100%; padding:8px; border-radius:8px; border:1px solid var(--line);">
+                    <option value="Tienda">📍 Recojo en Tienda (Gratis)</option>
+                    <option value="Domicilio">🚚 Envío a Domicilio (+ S/ 10.00)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre Completo</label>
+                <input type="text" id="customerName" placeholder="Ej. Ricardo Pérez">
+            </div>
+
+            <div class="form-group">
+                <label>Dirección / Notas</label>
+                <textarea id="customerNote" rows="2" placeholder="Dirección de envío o detalles adicionales"></textarea>
+            </div>
+
+            <button class="whatsapp-order" onclick="sendOrderWhatsApp()">Confirmar por WhatsApp</button>
+        </div>
+    </div>
+
+<script>
+const catalog = [
+    {
+        id: 1, name: "Minilazo", price20: 35, price30: 45, price40: 55,
+        desc: "Diseño tierno con detalle de minilazo.",
+        colors: [
+            { name: "Blanco", hex: "#ffffff", img: "stanleyp1blanco.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: "stanleyp1celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp1negro.jpg" }
+        ]
+    },
+    {
+        id: 2, name: "Labrados", price20: 38, price30: 48, price40: 58,
+        desc: "Textura labrada de alta durabilidad.",
+        colors: [
+            { name: "Rosado", hex: "#ffffff", img: "stanleyp2rosado.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: "stanleyp2celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp2negro.jpg" }
+        ]
+    },
+    {
+        id: 3, name: "Rayados", price20: 35, price30: 45, price40: 55,
+        desc: "Estilo lineal clásico con relieve.",
+        colors: [
+            { name: "Palo Rosa", hex: "#ffffff", img: "stanleyp3palorosa.jpg" },
+            { name: "Crema", hex: "#38bdf8", img: "stanleyp3crema.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp3negro.jpg" }
+        ]
+    },
+    {
+        id: 4, name: "Maxilazo", price20: 40, price30: 50, price40: 60,
+        desc: "Edición especial con lazo grande desplegable.",
+        colors: [
+            { name: "Blanco", hex: "#ffffff", img: "stanleyp4blanco.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: "stanleyp4celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp4negro.jpg" }
+        ]
+    },
+    {
+        id: 5, name: "Escamozo", price20: 38, price30: 48, price40: 58,
+        desc: "Acabado brillante con textura estilo escamas.",
+        colors: [
+            { name: "Dorado", hex: "#ffffff", img: "stanleyp5dorado.jpg" },
+            { name: "Rosa", hex: "#38bdf8", img: "stanleyp5rosa.jpg" },
+        ]
+    },
+    {
+        id: 6, name: "Lazo Coquette", price20: 42, price30: 52, price40: 62,
+        desc: "Estilo trendy Coquette con cinta de alta gama.",
+        colors: [
+            { name: "Crema", hex: "#ffffff", img: "stanleyp6crema.jpg" },
+            { name: "Azulino", hex: "#38bdf8", img: "stanleyp6azulino.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp6negro.jpg" }
+        ]
+    },
+    {
+        id: 7, name: "Escarchados", price20: 39, price30: 49, price40: 59,
+        desc: "Acabado glitter iridiscente al sol.",
+        colors: [
+            { name: "Blanco", hex: "#ffffff", img: "stanleyp7blanco.jpg" },
+            { name: "Verde", hex: "#38bdf8", img: "stanleyp7verde.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp7negro.jpg" }
+        ]
+    },
+    {
+        id: 8, name: "Clásicos", price20: 30, price30: 40, price40: 50,
+        desc: "Diseño mate térmico de un solo tono.",
+        colors: [
+            { name: "Gris", hex: "#ffffff", img: "stanleyp8gris.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: "stanleyp8celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp8negro.jpg" }
+        ]
+    },
+    {
+        id: 9, name: "Hello Kitty", price20: 45, price30: 55, price40: 65,
+        desc: "Colección oficial con personaje en 3D.",
+        colors: [
+            { name: "Especial", hex: "#ffffff", img: "stanleyp9especial.jpg" },
+            { name: "Rosado", hex: "#38bdf8", img: "stanleyp9rosado.jpg" },
+            { name: "Melody", hex: "#000000", img: "stanleyp9melody.jpg" }
+        ]
+    },
+    {
+        id: 10, name: "Tapas Flip", price20: 36, price30: 46, price40: 56,
+        desc: "Tapa abatible hermética anti-derrames.",
+        colors: [
+            { name: "Blanco", hex: "#ffffff", img: "stanleyp10blanco.jpg" },
+            { name: "Azul", hex: "#38bdf8", img: "stanleyp10azul.jpg" },
+            { name: "Negro", hex: "#000000", img: "stanleyp10negro.jpg" }
+        ]
+    }
+];
+
+let cart = [];
+let selectedProduct = null;
+let selectedSize = '20oz';
+let selectedColor = null;
+let modalQuantity = 1;
+
+function renderCatalog() {
+    const grid = document.getElementById('productsGrid');
+    grid.innerHTML = catalog.map(p => `
+        <article class="product-card" onclick="openProductModal(${p.id})">
+            <img class="product-img" src="${p.colors[0].img}" alt="${p.name}">
+            <div class="product-content">
+                <h3 class="product-name">${p.name}</h3>
+                <p class="product-description">${p.desc}</p>
+                <div class="product-bottom">
+                    <div class="product-price">Desde S/ ${p.price20.toFixed(2)}</div>
+                    <button class="add-button">Opciones</button>
+                </div>
+            </div>
+        </article>
+    `).join('');
+}
+
+function openAboutModal() {
+    document.getElementById('aboutModal').classList.add('active');
+}
+
+function openProductModal(id) {
+    selectedProduct = catalog.find(x => x.id === id);
+    selectedSize = '20oz';
+    selectedColor = selectedProduct.colors[0];
+    modalQuantity = 1;
+
+    document.getElementById('modalProductName').textContent = selectedProduct.name;
+    document.getElementById('modalProductDescription').textContent = selectedProduct.desc;
+    
+    renderModalOptions();
+    updateModalPriceAndImage();
+
+    document.getElementById('productModal').classList.add('active');
+}
+
+function renderModalOptions() {
+    const sizesContainer = document.getElementById('sizesContainer');
+    sizesContainer.innerHTML = `
+        <button class="size-btn ${selectedSize === '20oz' ? 'active' : ''}" onclick="selectSize('20oz')">20 oz</button>
+        <button class="size-btn ${selectedSize === '30oz' ? 'active' : ''}" onclick="selectSize('30oz')">30 oz</button>
+        <button class="size-btn ${selectedSize === '40oz' ? 'active' : ''}" onclick="selectSize('40oz')">40 oz</button>
+    `;
+
+    const colorsContainer = document.getElementById('colorsContainer');
+    colorsContainer.style.display = 'flex';
+    colorsContainer.style.gap = '8px';
+    colorsContainer.style.flexWrap = 'wrap';
+
+    colorsContainer.innerHTML = selectedProduct.colors.map(c => `
+        <div class="color-pill ${selectedColor.name === c.name ? 'active' : ''}" onclick="selectColor('${c.name}')">
+            <span class="color-dot" style="background:${c.hex};"></span>
+            ${c.name}
+        </div>
+    `).join('');
+}
+
+function selectSize(size) {
+    selectedSize = size;
+    renderModalOptions();
+    updateModalPriceAndImage();
+}
+
+function selectColor(colorName) {
+    selectedColor = selectedProduct.colors.find(c => c.name === colorName);
+    renderModalOptions();
+    updateModalPriceAndImage();
+}
+
+function updateModalPriceAndImage() {
+    let price = selectedProduct.price20;
+    if (selectedSize === '30oz') price = selectedProduct.price30;
+    if (selectedSize === '40oz') price = selectedProduct.price40;
+
+    document.getElementById('modalProductPrice').textContent = `S/ ${price.toFixed(2)}`;
+    document.getElementById('modalProductImage').src = selectedColor.img;
+    document.getElementById('modalQuantity').textContent = modalQuantity;
+}
+
+function changeModalQuantity(delta) {
+    modalQuantity = Math.max(1, modalQuantity + delta);
+    document.getElementById('modalQuantity').textContent = modalQuantity;
+}
+
+function addToCart() {
+    let unitPrice = selectedProduct.price20;
+    if (selectedSize === '30oz') unitPrice = selectedProduct.price30;
+    if (selectedSize === '40oz') unitPrice = selectedProduct.price40;
+
+    cart.push({
+        id: Date.now(),
+        name: selectedProduct.name,
+        size: selectedSize,
+        color: selectedColor.name,
+        price: unitPrice,
+        qty: modalQuantity,
+        img: selectedColor.img
+    });
+
+    closeModal('productModal');
+    updateCartUI();
+}
+
+function updateCartUI() {
+    const totalItems = cart.reduce((s, item) => s + item.qty, 0);
+    const subtotal = cart.reduce((s, item) => s + (item.price * item.qty), 0);
+
+    document.getElementById('cartCount').textContent = `${totalItems} ${totalItems === 1 ? 'producto' : 'productos'}`;
+    document.getElementById('floatingTotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+    renderCartItems();
+}
+
+function renderCartItems() {
+    const wrap = document.getElementById('cartItems');
+    if (!cart.length) {
+        wrap.innerHTML = '<p style="color:var(--muted); font-size:14px;">El carrito está vacío.</p>';
+        return;
+    }
+
+    wrap.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <div class="cart-item-top">
+                <strong>${item.name} (${item.size})</strong>
+                <span>S/ ${(item.price * item.qty).toFixed(2)}</span>
+            </div>
+            <div class="cart-item-details">
+                Color: ${item.color} | Cantidad: ${item.qty}
+                <br>
+                <button onclick="removeCartItem(${item.id})" style="color:red; border:0; background:none; cursor:pointer; font-size:11px; margin-top:4px;">Eliminar</button>
+            </div>
+        </div>
+    `).join('');
+
+    updateDelivery();
+}
+
+function removeCartItem(id) {
+    cart = cart.filter(x => x.id !== id);
+    updateCartUI();
+}
+
+function updateDelivery() {
+    const subtotal = cart.reduce((s, item) => s + (item.price * item.qty), 0);
+    const isDelivery = document.getElementById('deliveryOption').value === 'Domicilio';
+    const deliveryCost = isDelivery ? 10 : 0;
+
+    document.getElementById('summarySubtotal').textContent = `S/ ${subtotal.toFixed(2)}`;
+    document.getElementById('summaryDelivery').textContent = `S/ ${deliveryCost.toFixed(2)}`;
+    document.getElementById('summaryTotal').textContent = `S/ ${(subtotal + deliveryCost).toFixed(2)}`;
+}
+
+function openCart() {
+    updateCartUI();
+    document.getElementById('cartModal').classList.add('active');
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+}
+
+function sendOrderWhatsApp() {
+    if (!cart.length) {
+        alert('Agrega al menos un producto.');
+        return;
+    }
+
+    const name = document.getElementById('customerName').value.trim();
+    const note = document.getElementById('customerNote').value.trim();
+    const deliveryType = document.getElementById('deliveryOption').value;
+    const isDelivery = deliveryType === 'Domicilio';
+    const deliveryCost = isDelivery ? 10 : 0;
+    const subtotal = cart.reduce((s, item) => s + (item.price * item.qty), 0);
+    const total = subtotal + deliveryCost;
+
+    const itemsText = cart.map(item => 
+        `• ${item.qty}x ${item.name} [${item.size}] (${item.color}) — S/ ${(item.price * item.qty).toFixed(2)}`
+    ).join('\n');
+
+    const text = [
+        '✨ *NUEVO PEDIDO - STANLEY BOOT*',
+        '',
+        itemsText,
+        '',
+        `*Subtotal:* S/ ${subtotal.toFixed(2)}`,
+        `*Envío:* ${isDelivery ? 'S/ 10.00 (A Domicilio)' : 'Gratis (Recojo en Tienda)'}`,
+        `*TOTAL A PAGAR:* S/ ${total.toFixed(2)}`,
+        '',
+        name ? `*Cliente:* ${name}` : '',
+        note ? `*Dirección/Notas:* ${note}` : ''
+    ].filter(Boolean).join('\n');
+
+    window.open(`https://wa.me/51920832884?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCatalog();
+});
+</script>
+</body>
+</html>
