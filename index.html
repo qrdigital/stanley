@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Stanley Boot | Catálogo Oficial</title>
+    <meta name="title" content="Stanley Boot | Catálogo Oficial">
+    <meta name="description" content="Catálogo exclusivo: Tomatodos, Vasos y Accesorios en 20oz, 30oz y 40oz.">
 
+    <!-- METATAGS Y MINIATURA PARA WHATSAPP / REDES SOCIALES -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stanley Boot">
     <meta property="og:title" content="Stanley Boot | Catálogo Oficial">
     <meta property="og:description" content="Catálogo exclusivo: Tomatodos, Vasos y Accesorios en 20oz, 30oz y 40oz.">
-    <meta property="og:image" content="logostanley.jpg">
-    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ventalista.lat/demostanley/">
+
+    <!-- Configuración para la miniatura de WhatsApp -->
+    <meta property="og:image" content="https://qrdigital.github.io/stanley/logostanley.jpg">
+    <meta property="og:image:secure_url" content="https://qrdigital.github.io/stanley/logostanley.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+
+    <link rel="shortcut icon" href="https://qrdigital.github.io/stanley/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- BASE URL PARA RESOLVER IMÁGENES RELATIVAS -->
+    <base href="https://qrdigital.github.io/stanley/">
 
     <style>
         :root {
@@ -128,7 +147,6 @@
             align-items: center;
         }
 
-        /* BOTÓN DE DIRECCIÓN / MAPA */
         .meta-btn-location {
             background: #eff6ff;
             border: 1px solid #bfdbfe;
@@ -152,7 +170,6 @@
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
 
-        /* PESTAÑA FLOTANTE LATERAL */
         .side-tab {
             position: fixed;
             right: 0;
@@ -178,7 +195,6 @@
             transform: translateY(-50%) translateX(-3px);
         }
 
-        /* ESTILOS INTERNOS MODAL DE PRESENTACIÓN */
         .about-card {
             text-align: center;
             padding: 10px 5px;
@@ -221,7 +237,6 @@
             color: var(--accent);
         }
 
-        /* PRODUCTOS */
         .section {
             padding: 28px 0;
         }
@@ -299,7 +314,6 @@
             font-size: 12px;
         }
 
-        /* CARRITO FLOTANTE */
         .cart-floating {
             position: fixed;
             bottom: 18px;
@@ -323,7 +337,6 @@
             font-size: 16px;
         }
 
-        /* MODALES */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -475,7 +488,6 @@
             cursor: pointer;
         }
 
-        /* CARRITO ITEMS */
         .cart-item {
             border-bottom: 1px solid var(--line);
             padding: 12px 0;
@@ -553,18 +565,17 @@
 </head>
 <body>
 
-    <!-- PESTAÑA FLOTANTE LATERAL -->
     <div class="side-tab" onclick="openAboutModal()">
         NUESTRA PROMESA
     </div>
 
     <header class="hero">
         <div class="hero-banner-wrap">
-            <img class="hero-image" src="bannerstanley.jpg" alt="Banner Stanley Boot">
+            <img class="hero-image" src="https://qrdigital.github.io/stanley/bannerstanley.jpg" alt="Banner Stanley Boot">
         </div>
         <div class="container business-info">
             <div class="business-top">
-                <img class="business-logo" src="logostanley.jpg" alt="Logo Stanley Boot">
+                <img class="business-logo" src="https://qrdigital.github.io/stanley/logostanley.jpg" alt="Logo Stanley Boot">
                 <div>
                     <h1 class="business-name">Stanley Boot</h1>
                     <p class="business-description">Catálogo exclusivo de tomatodos y vasos personalizados.</p>
@@ -595,11 +606,10 @@
         <div class="cart-total" id="floatingTotal">S/ 0.00</div>
     </div>
 
-    <!-- MODAL SOBRE LA EXPERIENCIA STANLEY BOOT -->
     <div class="modal-overlay" id="aboutModal">
         <div class="modal">
             <div class="modal-header">
-                <img src="logostanley.jpg" alt="Logo Stanley Boot" style="width: 45px; height: 45px; border-radius: 10px; object-fit: cover;">
+                <img src="https://qrdigital.github.io/stanley/logostanley.jpg" alt="Logo Stanley Boot" style="width: 45px; height: 45px; border-radius: 10px; object-fit: cover;">
                 <button class="close-button" onclick="closeModal('aboutModal')">×</button>
             </div>
 
@@ -626,7 +636,6 @@
         </div>
     </div>
 
-    <!-- MODAL PRODUCTO -->
     <div class="modal-overlay" id="productModal">
         <div class="modal">
             <div class="modal-header">
@@ -642,19 +651,16 @@
                 </div>
             </div>
 
-            <!-- MEDIDA -->
             <div class="option-group">
                 <div class="option-title">1. Selecciona la Medida</div>
                 <div class="options-grid" id="sizesContainer"></div>
             </div>
 
-            <!-- COLOR -->
             <div class="option-group">
                 <div class="option-title">2. Selecciona el Color</div>
                 <div class="color-pill-list" id="colorsContainer"></div>
             </div>
 
-            <!-- CANTIDAD -->
             <div class="quantity-selector">
                 <button type="button" onclick="changeModalQuantity(-1)">−</button>
                 <span id="modalQuantity" style="font-weight:800;">1</span>
@@ -665,7 +671,6 @@
         </div>
     </div>
 
-    <!-- MODAL CARRITO -->
     <div class="modal-overlay" id="cartModal">
         <div class="modal">
             <div class="modal-header">
@@ -713,94 +718,96 @@
     </div>
 
 <script>
+const CDN_BASE = "https://qrdigital.github.io/stanley/";
+
 const catalog = [
     {
         id: 1, name: "Minilazo", price20: 35, price30: 45, price40: 55,
         desc: "Diseño tierno con detalle de minilazo.",
         colors: [
-            { name: "Blanco", hex: "#ffffff", img: "stanleyp1blanco.jpg" },
-            { name: "Celeste", hex: "#38bdf8", img: "stanleyp1celeste.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp1negro.jpg" }
+            { name: "Blanco", hex: "#ffffff", img: CDN_BASE + "stanleyp1blanco.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: CDN_BASE + "stanleyp1celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp1negro.jpg" }
         ]
     },
     {
         id: 2, name: "Labrados", price20: 38, price30: 48, price40: 58,
         desc: "Textura labrada de alta durabilidad.",
         colors: [
-            { name: "Rosado", hex: "#ffffff", img: "stanleyp2rosado.jpg" },
-            { name: "Celeste", hex: "#38bdf8", img: "stanleyp2celeste.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp2negro.jpg" }
+            { name: "Rosado", hex: "#ffffff", img: CDN_BASE + "stanleyp2rosado.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: CDN_BASE + "stanleyp2celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp2negro.jpg" }
         ]
     },
     {
         id: 3, name: "Rayados", price20: 35, price30: 45, price40: 55,
         desc: "Estilo lineal clásico con relieve.",
         colors: [
-            { name: "Palo Rosa", hex: "#ffffff", img: "stanleyp3palorosa.jpg" },
-            { name: "Crema", hex: "#38bdf8", img: "stanleyp3crema.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp3negro.jpg" }
+            { name: "Palo Rosa", hex: "#ffffff", img: CDN_BASE + "stanleyp3palorosa.jpg" },
+            { name: "Crema", hex: "#38bdf8", img: CDN_BASE + "stanleyp3crema.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp3negro.jpg" }
         ]
     },
     {
         id: 4, name: "Maxilazo", price20: 40, price30: 50, price40: 60,
         desc: "Edición especial con lazo grande desplegable.",
         colors: [
-            { name: "Blanco", hex: "#ffffff", img: "stanleyp4blanco.jpg" },
-            { name: "Celeste", hex: "#38bdf8", img: "stanleyp4celeste.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp4negro.jpg" }
+            { name: "Blanco", hex: "#ffffff", img: CDN_BASE + "stanleyp4blanco.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: CDN_BASE + "stanleyp4celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp4negro.jpg" }
         ]
     },
     {
         id: 5, name: "Escamozo", price20: 38, price30: 48, price40: 58,
         desc: "Acabado brillante con textura estilo escamas.",
         colors: [
-            { name: "Dorado", hex: "#ffffff", img: "stanleyp5dorado.jpg" },
-            { name: "Rosa", hex: "#38bdf8", img: "stanleyp5rosa.jpg" },
+            { name: "Dorado", hex: "#ffffff", img: CDN_BASE + "stanleyp5dorado.jpg" },
+            { name: "Rosa", hex: "#38bdf8", img: CDN_BASE + "stanleyp5rosa.jpg" },
         ]
     },
     {
         id: 6, name: "Lazo Coquette", price20: 42, price30: 52, price40: 62,
         desc: "Estilo trendy Coquette con cinta de alta gama.",
         colors: [
-            { name: "Crema", hex: "#ffffff", img: "stanleyp6crema.jpg" },
-            { name: "Azulino", hex: "#38bdf8", img: "stanleyp6azulino.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp6negro.jpg" }
+            { name: "Crema", hex: "#ffffff", img: CDN_BASE + "stanleyp6crema.jpg" },
+            { name: "Azulino", hex: "#38bdf8", img: CDN_BASE + "stanleyp6azulino.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp6negro.jpg" }
         ]
     },
     {
         id: 7, name: "Escarchados", price20: 39, price30: 49, price40: 59,
         desc: "Acabado glitter iridiscente al sol.",
         colors: [
-            { name: "Blanco", hex: "#ffffff", img: "stanleyp7blanco.jpg" },
-            { name: "Verde", hex: "#38bdf8", img: "stanleyp7verde.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp7negro.jpg" }
+            { name: "Blanco", hex: "#ffffff", img: CDN_BASE + "stanleyp7blanco.jpg" },
+            { name: "Verde", hex: "#38bdf8", img: CDN_BASE + "stanleyp7verde.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp7negro.jpg" }
         ]
     },
     {
         id: 8, name: "Clásicos", price20: 30, price30: 40, price40: 50,
         desc: "Diseño mate térmico de un solo tono.",
         colors: [
-            { name: "Gris", hex: "#ffffff", img: "stanleyp8gris.jpg" },
-            { name: "Celeste", hex: "#38bdf8", img: "stanleyp8celeste.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp8negro.jpg" }
+            { name: "Gris", hex: "#ffffff", img: CDN_BASE + "stanleyp8gris.jpg" },
+            { name: "Celeste", hex: "#38bdf8", img: CDN_BASE + "stanleyp8celeste.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp8negro.jpg" }
         ]
     },
     {
         id: 9, name: "Hello Kitty", price20: 45, price30: 55, price40: 65,
         desc: "Colección oficial con personaje en 3D.",
         colors: [
-            { name: "Especial", hex: "#ffffff", img: "stanleyp9especial.jpg" },
-            { name: "Rosado", hex: "#38bdf8", img: "stanleyp9rosado.jpg" },
-            { name: "Melody", hex: "#000000", img: "stanleyp9melody.jpg" }
+            { name: "Especial", hex: "#ffffff", img: CDN_BASE + "stanleyp9especial.jpg" },
+            { name: "Rosado", hex: "#38bdf8", img: CDN_BASE + "stanleyp9rosado.jpg" },
+            { name: "Melody", hex: "#000000", img: CDN_BASE + "stanleyp9melody.jpg" }
         ]
     },
     {
         id: 10, name: "Tapas Flip", price20: 36, price30: 46, price40: 56,
         desc: "Tapa abatible hermética anti-derrames.",
         colors: [
-            { name: "Blanco", hex: "#ffffff", img: "stanleyp10blanco.jpg" },
-            { name: "Azul", hex: "#38bdf8", img: "stanleyp10azul.jpg" },
-            { name: "Negro", hex: "#000000", img: "stanleyp10negro.jpg" }
+            { name: "Blanco", hex: "#ffffff", img: CDN_BASE + "stanleyp10blanco.jpg" },
+            { name: "Azul", hex: "#38bdf8", img: CDN_BASE + "stanleyp10azul.jpg" },
+            { name: "Negro", hex: "#000000", img: CDN_BASE + "stanleyp10negro.jpg" }
         ]
     }
 ];
@@ -1011,3 +1018,5 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 </body>
 </html>
+
+```
